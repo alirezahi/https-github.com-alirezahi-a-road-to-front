@@ -1,0 +1,141 @@
+<html lang="en" style="
+    height: 100%;
+">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin:0;
+            padding: 0;
+        }
+        .img-class {
+            border: 5px solid transparent;
+        }
+
+        .img-class:hover {
+            border: 5px solid grey;
+        }
+
+        .button-class:hover {
+            border: 1px solid transparent;
+        }
+
+        .button-class:hover {
+            border: 1px solid grey;
+            background-color: #DDD;
+        }
+    </style>
+</head>
+
+<body style="
+    height: 100%;
+">
+    <div style="height: 100%;display: flex;flex-direction: column;">
+        <div dir="rtl" style="display: flex; width: 100%;">
+            <img class="img-class" width="60" height="60" style="border-radius: 50%;width:60px;height: 60px;"
+                src="https://lh3.googleusercontent.com/ogw/ADGmqu_mx8VwihXcL-3GQgRJtPGnkPVKcokQ7TKXMouiDg=s32-c-mo"
+                alt="alireza">
+            <span
+                style="width: 60px; height: 60px;display: flex;justify-content:center; align-items:center;font-size: 30px; background-color: grey;">...</span>
+            <ul style="list-style-type: none; display: inline-flex; padding-right: 10px;">
+                <li style="padding-left: 5px;padding-top:5px;">Images</li>
+                <li style="padding-top:5px;">Gmail</li>
+            </ul>
+        </div>
+        <div style="
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+        ">
+            <div style="
+                display: flex;
+                flex-direction: column;
+            ">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="google">
+                <input type="text" style="
+                    border-radius: 25px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    border: 1px solid #dfe1e5;
+                    padding: 10px;
+                ">
+                <div style="
+                        text-align: center;
+                    ">
+                    <button style="
+                    /* background: transparent; */
+                    /* border: none; */
+                    /* color: grey; */
+                " class="button-class">
+                        Google Search
+                    </button>
+                    <button style="
+                        background: transparent;
+                        border: none;
+                        color: grey;
+                    " class="button-class">
+                        I'm Feeling Lucky
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 10px;display: flex; justify-content: space-between;background-color: grey;">
+            <div>
+                a
+            </div>
+            <div>
+                b
+            </div>
+        </div>
+    </div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+    <iframe src="chrome-extension://kbbdabhdfibnancpjfhlkhafgdilcnji/./html/sources.html" allow="camera"
+        style="display: none;"></iframe><iframe
+        src="chrome-extension://kbbdabhdfibnancpjfhlkhafgdilcnji/./html/audiosources.html" allow="microphone"
+        style="display: none;"></iframe>
+</body>
+
+</html>
