@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <p id="quote-container">
+
+    </p>
+    <button onclick="toggleQuote()">
+        toggle the quote!
+    </button>
+
+    <script>
+        let lastQuoteId;
+
+        function toggleQuote(){
+            var quotes = [
+                'Hasta La vista, baby',
+                'Why so serious',
+                'Run forrest, run',
+                'May the force be with you',
+                'If god is us, who is with them'
+            ];
+
+            var getRandomNumber = () => parseInt(Math.random()*quotes.length);
+
+            let tmpLastQuoteId = getRandomNumber();
+            while(lastQuoteId === tmpLastQuoteId){
+                tmpLastQuoteId = getRandomNumber();
+            }
+            lastQuoteId = tmpLastQuoteId;
+            var quoteContainer = document.getElementById('quote-container');
+            quoteContainer.innerText = quotes[lastQuoteId];
+        }
+
+        toggleQuote();
+    </script>
+</body>
+</html>

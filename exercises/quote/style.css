@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    text-align: center;
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: azure;
+}
+
+button:hover{
+    border-radius: 5px;
+    border: 1px solid grey;
+}
