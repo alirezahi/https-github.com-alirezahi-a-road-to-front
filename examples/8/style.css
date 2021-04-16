@@ -1,0 +1,14 @@
+.styling{
+    background-color: aqua;
+    text-align: right;
+}
+$my-color: red;
+.flex-class{
+    &.intro{
+        color: $my-color;
+    }
+    &.result{
+        color: $my-color;
+    }
+    display: flex;
+}
